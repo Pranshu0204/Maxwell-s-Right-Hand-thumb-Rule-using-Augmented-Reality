@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./quiz_style.css">
+</head>
+
+<body>
+    <div id="topstuff">Quiz!</div>
+    <div id="div_monapple"></div>
+    <div id="quiz_text">Take a quiz</div>
+    <div id="div_choices">
+        <div id="div_choice12"></div>
+        <div id="div_choice34"></div>
+    </div>
+    <script src="./quiz_animation.js"></script>
+    <script src="./quiz_sketch.js"></script>
+    <div class="content">
+        <br>
+        <button class="toggle_button reset_button" onclick="setup_quiz();">Reset</button><br><br><br><br><br><br><br>
+        <button class="toggle_button back_button" onclick="window.location.href='../index.html'">Back</button>
+        <br>
+        <p></p>
+  </div>
+  <footer>
+    <img class="corner corner_left" src="../corner.png" alt="" height="100px">
+    <img src="../collegelogo.png" alt="" height="100px">
+    <img class="corner corner_right" src="../corner.png" alt="" height="100px">
+
+  </footer>
+</body>
+</html>

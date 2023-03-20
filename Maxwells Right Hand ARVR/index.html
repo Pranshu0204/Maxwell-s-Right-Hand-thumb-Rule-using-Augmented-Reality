@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script defer language="javascript" type="text/javascript" src="additionaladditions.js"></script>
+  <script defer language="javascript" type="text/javascript" src="additionalfunctions.js"></script>
+
+  <script defer language="javascript" type="text/javascript" src="detection.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="cp.js"></script>
+  <script src="sketch.js"></script>
+  <div class="container">
+    <video class="input_video" playsInline></video>
+    <!-- <canvas class="output_canvas"></canvas> -->
+  </div>
+  <div class="settings">
+    <div class="camera_settings">
+      <button class="toggle_button" onclick="changeCamera();">Change Camera</button>
+      <button class="toggle_button" onclick="flipCamera();">Flip Camera</button>
+      <i class="fa fa-camera" style="font-size:23px;padding-left: 10px;"></i><br><br>
+      <div class="camera_settings slider_text">Resolution Modifier :
+        <input id="slider_resolution" class="clicked" type="range" min="0" max="100" value="25"
+          oninput="sliderChangeRes()">
+      </div><br><br>
+      <div class="camera_settings">
+        Increase for better performance, but run on lower resolution.
+      </div>
+    </div>
+    <div>
+
+      <div class="toggle_settings">
+        <button id="button_togglelandmarks" class="toggle_button" onclick="toggleLandmarks();"></button>
+        <br>
+        <button id="button_toggleanimation" class="toggle_button" onclick="toggleAnimation();"></button><br><br>
+        <div class="slider_text">Curl Detection Thrushold :
+          <input id="slider_curl" class="clicked" type="range" min="0" max="100" value="40" oninput="sliderChangeCurl()">
+        </div>
+        <div class="slider_text">Magnitude(I) :
+          <input id="slider_mag" class="clicked" type="range" min="0" max="100" value="30" oninput="sliderChangeMag()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h1>Maxwell's Right Hand Thumb Rule</h1>
+    <p>An interactive Demonstration for how the flow of current is related to the magnetic field formed. <br>Show your
+      hands on the camera and curl your fingers to view how the rule works! <br>Be in a well lit environment and enable
+      marker display to check if hands are being detected properly, and adjust the curl detection threshold to your
+      liking. <br>
+      <img class="ruleimage" src="rule.png" alt="">
+      <br>The Maxwell's right hand thumb rule states that "When the conductor is held in your right hand,
+      such that the direction of the thumb points the direction of the current and the curled finger gives the direction
+      of the magnetic finger."
+    </p>
+    <button class="toggle_button quiz_button" onclick="window.location.href='./Quiz/index.html'">Take a Quiz!</button>
+    <br><br><br>
+    <h1>
+      Preview
+    </h1>
+
+    <img class="previewgif" src="animationpreview.gif" alt="" height="350px"><br>
+    Animation for the flow of electrons around the conductor
+    <!-- <br>
+    <br>
+    Show your hand in the camera to view the animation in AR!<br>
+    <img class="previewimage" src="preview.jpg" alt="" height="850px">
+    <br><br>
+    <p>An AR Demonstration by</p> -->
+  </div>
+
+</body>
+
+</html>

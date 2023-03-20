@@ -1,0 +1,107 @@
+.quiz_choice{
+    margin: 130px;
+    /* dark blue border */
+    border: solid 2px #006699;
+    /* padding */
+    padding: 10px;
+    /* rounded corners */
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    transition : 500ms;
+    /* scale it down a bit */
+    transform: scale(2);    
+
+}
+/* mouse over effect make border transition thicker */
+.quiz_choice:hover{
+    transition : 500ms;
+    border: solid 5px #0080ff;
+    padding: 0px;
+}
+#div_choice12{
+    /* flexbox it to display the choices spaced evenly in 2 columns */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+#div_choice34{
+    /* flexbox it to display the choices spaced evenly in 2 columns */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#div_choices{
+    /* flexbox it to display the choices spaced evenly in 2 columns */
+    display: flex;
+    flex-direction: column;
+    /* give some space between the choices */
+}
+
+
+.monapple{
+    transform: scale(1);    
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+#div_monapple{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 140px;
+    transform: scale(2);
+}
+
+
+#quiz_text{
+    /* adjust the content to the center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+#topstuff{
+    /* adjust the content to the center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.back_button{
+    font-size: 35px;
+  /* make the text bold */
+  font-weight: bold;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.reset_button{
+    padding-left: 5rem;
+  padding-right: 5rem;
+}
+footer {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;   
+}
+@media (min-height: 1000px) {
+
+    footer {
+        position: absolute;
+     }
+
+}
